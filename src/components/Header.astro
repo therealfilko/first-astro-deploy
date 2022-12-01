@@ -1,11 +1,16 @@
 ---
 import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
+import ThemeToggle from './ThemeToggleButton';
 ---
 
-<header>
-    <nav>
-        <Hamburger />
-        <Navigation />
-    </nav>
+<header class="fixed w-full pq2 z-20 backdrop-blur-md">
+    <div class="p-3 mx-auto max-w-4xl">
+        <nav class="flex justify-between items-center text-base">
+            <h2>Arabesque</h2>
+            <Hamburger />
+            <Navigation />
+            <ThemeToggle client:load />
+        </nav>
+    </div>
 </header>
